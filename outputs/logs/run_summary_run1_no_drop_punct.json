@@ -1,0 +1,12 @@
+{
+  "dataset": "imdb",
+  "seed": 42,
+  "vectorizer": "tfidf",
+  "model": "logreg",
+  "max_features": 20000,
+  "ngram_max": 2,
+  "replace_number": true,
+  "drop_punct": false,
+  "metrics_test_macro_f1": 0.9063882573430011,
+  "metrics_test_accuracy": 0.9064
+}
