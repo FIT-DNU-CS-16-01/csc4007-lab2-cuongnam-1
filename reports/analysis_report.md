@@ -14,7 +14,7 @@
 ## 2. Preprocessing design
 - **Bạn đã dùng những bước làm sạch nào?** Lowercase, remove HTML tags, tokenization, replace_number, optional drop_punct
 - **Bạn giữ lại dấu câu hay bỏ đi? Vì sao?** GIỮ LẠI. Vì: TF-IDF + drop_punct = 90.68% = TF-IDF + keep_punct (không khác). Dấu câu ít chứa sentiment → không ảnh hưởng
-- **Bạn có thay số bằng `<NUM>` không? Vì sao?** CÓ, dùng --replace_number. Vì: Review IMDB có rating (1-10) hoặc năm phim → thay bằng `<NUM>` token. Model focus vào sentiment words, không 10,000 con số
+- **Bạn có thay số bằng `<NUM>` không? Vì sao?** CÓ, dùng --replace_number. Vì: Review IMDB có rating (1-10) hoặc năm phim → thay bằng `<NUM>` token. Model focus vào sentiment words
 - **Có bước nào bạn cố tình KHÔNG làm để tránh mất tín hiệu?** (1) KHÔNG xóa stopwords: "not good" cần "not", (2) KHÔNG stemming: "loved" ≠ "loving", (3) KHÔNG xóa review-specific: "plot", "acting" quan trọng, (4) KHÔNG normalize repeated: "goooood" có intensity
 
 ## 3. Experiment comparison
